@@ -1,0 +1,21 @@
+<app-greeting [message]="homeMessage()" />
+<app-counter />
+<input
+  placeholder="Type something..."
+  type="text"
+  (keyup)="keyUpHandler($event)"
+/>
+
+<app-card
+  [title]="'Card 1 Title'"
+  [content]="'This is the content of Card 1.'"
+  [buttonText]="'Learn More'"
+  (buttonClick)="onCard1Click()"
+></app-card>
+
+<app-card
+  [title]="'Card 2 Title'"
+  [content]="'This is the content of Card 2.'"
+  [buttonText]="'View Details'"
+  (buttonClick)="onCard2Click()"
+></app-card>

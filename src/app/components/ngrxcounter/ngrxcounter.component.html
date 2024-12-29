@@ -1,0 +1,17 @@
+<div class="counter">
+  Current Count: 
+  <span class="counter__number">{{ counter$ | async }}</span>
+</div>
+
+<button class="button" (click)="increment()">Increment</button>
+<button class="button" (click)="decrement()">Decrement</button>
+<button class="button" (click)="reset()">Reset Counter</button>
+
+<app-card
+  *ngFor="let card of cards"
+  [title]="card.title"
+  [content]="card.content"
+  [buttonText]="card.buttonText"
+  (buttonClick)="onCardClick(card.id)"
+></app-card>
+
